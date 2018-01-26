@@ -9,6 +9,7 @@
   import dataJson from '@/data'
   import ThreadList from '@/components/ThreadList.vue'
 
+  console.log(dataJson)
   export default {
     components: {
       ThreadList
