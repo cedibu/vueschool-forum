@@ -1,22 +1,22 @@
 <template>
   <div class="col-full">
     <h1>Welcome to the Forum !</h1>
-    <ThreadList :threads="threads"/>
+    <ForumList :forums="forums"/>
   </div>
 </template>
 
 <script>
   import dataJson from '@/data'
-  import ThreadList from '@/components/ThreadList.vue'
+  import ForumList from '@/components/ForumList.vue'
 
   console.log(dataJson)
   export default {
     components: {
-      ThreadList
+      ForumList
     },
     data () {
       return {
-        threads: Object.values(dataJson.threads),
+        forums: Object.values(dataJson.forums),
         posts: dataJson.posts,
         users: dataJson.users
       }
