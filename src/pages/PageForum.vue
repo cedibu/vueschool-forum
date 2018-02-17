@@ -1,7 +1,6 @@
 <template>
   <div class="forum-wrapper">
     <div class="col-full push-top">
-
       <div class="forum-header">
         <div class="forum-details">
           <h1>{{forum.name}}</h1>

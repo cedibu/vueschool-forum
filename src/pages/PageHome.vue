@@ -1,24 +1,21 @@
 <template>
   <div class="col-full">
     <h1>Welcome to the Forum !</h1>
-    <ForumList :forums="forums"/>
+    <CategoryList :categories="categories"/>
   </div>
 </template>
 
 <script>
-  import dataJson from '@/data'
-  import ForumList from '@/components/ForumList.vue'
+  import CategoryList from '@/components/CategoryList.vue'
 
-  console.log(dataJson)
   export default {
     components: {
-      ForumList
+      CategoryList
     },
-    data () {
-      return {
-        forums: Object.values(dataJson.forums),
-        posts: dataJson.posts,
-        users: dataJson.users
+
+    computed: {
+      categories () {
+        return Object.values(this.$store.state.categories)
       }
     }
   }
