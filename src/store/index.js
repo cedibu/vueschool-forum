@@ -5,11 +5,20 @@ import sourceData from '@/data'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: sourceData,
+  state: {
+    ...sourceData,
+    authId: 'VXjpr2WHa8Ux4Bnggym8QFLdv5C3'
+  },
+
+  getters: {
+    authUser (state) {
+      // console.log(state.users)
+      return state.users[state.authId]
+    }
+  },
 
   actions: {
     createPost (context, post) {
-      console.log('post', post)
       const postId = 'greatPost' + Math.random()
       post['.key'] = postId
       context.commit('setPost', {post, postId})
