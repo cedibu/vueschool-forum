@@ -5,6 +5,10 @@ import App from './App'
 import router from './router'
 import store from './store/index'
 import AppDate from '@/components/AppDate'
+import ability from '../ressources/ability'
+import abilityPlugin from '../ressources/ability-plugin'
+
+Vue.use(abilityPlugin, ability)
 
 Vue.component('AppDate', AppDate)
 
@@ -16,5 +20,5 @@ new Vue({
   router,
   store,
   template: '<App/>',
-  components: { App }
+  components: {App}
 })

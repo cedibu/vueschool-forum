@@ -783,7 +783,8 @@
       "text": "We're proud to introduce a new feature to the forum. You can now react to a post by clicking the smily icon in the bottom right of a post :D",
       "threadId": "-KvgjI6bfbWYlbYV5ndr",
       "userId": "ALXhxjwgY9PinwNGHpfai6OWyDu2",
-      ".key": "-KvgjI6bfbWYlbYV5nds"
+      ".key": "-KvgjI6bfbWYlbYV5nds",
+      "type": "Post"
     },
     "-KvhfY9Xq81wRkrWOl1a": {
       "publishedAt": 1507226169,
@@ -906,7 +907,8 @@
       "text": "Thank you @rah:ALXhxjwgY9PinwNGHpfai6OWyDu2 🎉",
       "threadId": "-KvgjI6bfbWYlbYV5ndr",
       "userId": "jUjmgCurRRdzayqbRMO7aTG9X1G2",
-      ".key": "-KxxU6bYWl-6Xnu9g-56"
+      ".key": "-KxxU6bYWl-6Xnu9g-56",
+      "type": "Post"
     },
     "-KxxZn1egW-9INEREC2K": {
       "publishedAt": 1509640311,

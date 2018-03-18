@@ -10,7 +10,8 @@
 
       <p class="desktop-only text-small">{{userPostsCount}} posts</p>
     </div>
-
+    ---{{canUpdate}}---
+    {{post}}
     <div class="post-content">
       <template v-if="!editing">
         <div>
@@ -20,7 +21,6 @@
         </div>
         <a @click.prevent="editing = true" href="#" style="margin-left: auto;" class="link-unstyled" title="Make a change"><i class="fa fa-pencil"></i></a>
       </template>
-
       <div v-else>
         <PostEditor
         :post="post"
@@ -66,6 +66,10 @@
       },
       userPostsCount () {
         return countObjectProperties(this.user.posts)
+      },
+      canUpdate () {
+        console.log('userid', this.post.userId)
+        return this.$can('update', this.post)
       }
     }
   }
