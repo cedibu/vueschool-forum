@@ -47,11 +47,11 @@
         <td>{{user.nom}}</td>
 
         <td v-for="index in (pages.length * 2)">
+          {{pageCust(index-1)}} - {{index-1}}
           <input type="checkbox" :name="index % 2 === 0 ? 'write_' : 'read_'"/>
         </td>
       </tr>
     </table>
-    {{pagesAndusers}}
   </div>
 </template>
 
@@ -70,8 +70,26 @@
         return arr
       }
     },
+    methods: {
+      pageCust (index) {
+        console.log(index)
+        if (index % 2 === 0) {
+          this.isFirst = true
+          return this.pages[index]
+        }
+
+//        if (index === 0 || index === 1) {
+//          return this.pages[0]
+//        } else if (index === 2 || index === 3) {
+//          return this.pages[1]
+//        } else if (index === 4 || index === 5) {
+//          return this.pages[2]
+//        }
+      }
+    },
     data () {
       return {
+        isFirst: false,
         pages: ['/', '/search-registre', '/detail'],
         users: [
           {
