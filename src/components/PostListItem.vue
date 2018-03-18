@@ -68,7 +68,6 @@
         return countObjectProperties(this.user.posts)
       },
       canUpdate () {
-        console.log('userid', this.post.userId)
         return this.$can('update', this.post)
       }
     }
