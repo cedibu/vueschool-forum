@@ -8,6 +8,7 @@ import Category from '@/pages/PageCategory'
 import Forum from '@/pages/PageForum'
 import Profile from '@/pages/PageProfile'
 import NotFound from '@/pages/PageNotFound'
+import UsersPage from '@/pages/UsersPage'
 
 Vue.use(Router)
 
@@ -17,6 +18,11 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/users',
+      name: 'User',
+      component: UsersPage
     },
     {
       path: '/category/:id',
